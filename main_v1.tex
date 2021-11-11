@@ -40,6 +40,9 @@
 \author[0000-0001-5473-856X]{Kelly Hambleton}
 \affiliation{Villanova University, 800 Lancaster Avenue, Villanova, PA 19850, USA}
 
+\author[0000-0001-9806-0551]{Ralph Bohlin}
+\affiliation{Space Telescope Science Institute, 3700 San Martin Dr., Baltimore, MD 21218, USA}
+
 \author{Scott W. Fleming}
 \affiliation{Space Telescope Science Institute, 3700 San Martin Dr.,
   Baltimore, MD 21218, USA}
@@ -47,17 +50,15 @@
 \author[0000-0001-5340-6774]{Karl D.\ Gordon}
 \affiliation{Space Telescope Science Institute, 3700 San Martin Dr., Baltimore, MD 21218, USA}
 
+\author{Catherine Kaleida}
+\affiliation{Space Telescope Science Institute, 3700 San Martin Dr., Baltimore, MD 21218, USA}
+  
 \author{Khalid Mohamed}
 \affiliation{Space Telescope Science Institute, 3700 San Martin Dr.,
   Baltimore, MD 21218, USA}
 \affiliation{Department of Physics \& Astronomy, Amherst College, C025 Science Center 25 East Drive, Amherst, MA 01002, USA}
 
-\author{Catherine Kaleida}
-\affiliation{Space Telescope Science Institute, 3700 San Martin Dr.,
-  Baltimore, MD 21218, USA}
-  
-\author[0000-0001-9806-0551]{Ralph Bohlin}
-\affiliation{Space Telescope Science Institute, 3700 San Martin Dr., Baltimore, MD 21218, USA}
+
 
 \begin{abstract}
 We use data from the Transiting Exoplanet Survey Satellite (\tess) to search for, and set limits on, optical to near-infrared photometric variability of the candidate \jwst\ spectrophotometric standards. Our search of 37 of these candidate standards has revealed measurable periodic variability in 15 stars. The majority of those show variability that is less than half a percent; however, four stars are observed to vary photometrically, from minimum to maximum flux, by more than 1\% (the G dwarf \object{HD~38949} and three fainter A dwarfs).  Variability of this size would likely impact the error budget in the spectrophotometric calibration of the science instruments aboard \jwst.  For the 22 candidate standards with no detected variability, we report upper limits on the observed changes in flux.  Despite some systematic noise, all stars brighter than $12^{th}$\,magnitude in the TESS band show a 3$\sigma$ upper limit on the total change in brightness of less than half a percent on time scales between an hour and multiple weeks, empirically establishing their suitability as spectrophotometric standards.
@@ -71,17 +72,15 @@ We use data from the Transiting Exoplanet Survey Satellite (\tess) to search for
 \section{Introduction} 
 \label{sec:intro} % Sec. 1.0
 
-The James Webb Space Telescope (\webb), an infrared space telescope with a diameter of 6.5\,m, promises to revolutionize many areas of astrophysics, from exoplanets to the most distant galaxies \citep{Kalirai2018,gardner2006jwst}.  In order to accomplish those goals, \webb\ will observe a sample of spectrophotometric standard stars to calibrate observations across the near- and mid-infrared (0.6--28.8~\mum).  The objective is an accuracy in the observed flux of the standard stars to better than 2\% \citep[see JWST Data Absolute Flux Calibration in][]{jdox}.  A successful standard-star calibration program will not only enable the absolute calibration and the \webb\ cross-instrument calibration, but will also tie \webb\ observations to other space telescopes, such as Hubble, Spitzer, and WISE, and other ground-based observatories as well.
+The James Webb Space Telescope (\webb), an infrared space telescope with a diameter of 6.5\,m, promises to revolutionize many areas of astrophysics, from exoplanets to the most distant galaxies \citep{Kalirai2018,gardner2006jwst}.  In order to accomplish those goals, \webb\ will observe a sample of spectrophotometric standard stars to calibrate observations across the near- and mid-infrared (0.6--28.8~\mum).  The objective is an accuracy in the observed flux of the standard stars to better than 2\% \citep[see JWST Data Absolute Flux Calibration in][]{jdox}.  A successful standard-star calibration program will not only enable the absolute calibration and the \webb\ cross-instrument calibration, but will also tie \webb\ observations to other space telescopes, such as Hubble, Spitzer, and WISE, and other ground-based observatories.
 
 The selection of standard stars must take into account many factors that can reduce both the accuracy and the precision of the spectrophotometric calibration \citep[e.g.][]{Sloan2015}.  The list of possible reasons to reject potential standards during the vetting process is long, but among them, variability is always a red flag.  Variable stars should be avoided because their variations will increase the noise in the calibration data.  Even low-amplitude variability below any level of direct concern could point to more subtle concerns, such as binarity, pulsation, strong magnetic-field activity, or the presence of circumstellar material \citep{Bohlin2014PASP126}. Each of these issues is a reason in itself to reject a candidate, but may have otherwise gone unnoticed.  The identification of any known variable stars prior to their observation by \webb\ will give the calibration team the opportunity to investigate them more closely and potentially save valuable observing time.  Optimizing the calibration of \webb\ will contribute to the success of NASA's flagship mission.
 
-Photometric monitoring of stars, as done by missions like CoRoT \citep{corot}, Kepler \citep{Koch2010} and \tess\ \citep{Ricker2015}, has revealed that they can change brightness due to a variety of factors, and these variations can unexpectedly change in timescale or amplitude. Many of these variations are internal to the star, e.g.\ stellar pulsations or spots rotating in and out of view \citep[e.g.][]{Berger1979deltaScuti, Mcquillan2014}, while other variations are external, e.g.\ eclipses and transits \citep[e.g.][]{prsa2011, Thompson2018}. Time-series photometric observations have revealed many examples of atypical brightness variations where stars change brightness suddenly and in unexpected ways.  For example, Boyajian's star, KIC~8462852, was discovered using Kepler data and shows unexplained drops in the flux of the star as large as 20\% at seemingly random times \citep{Boyajian2016MNRAS}.  The nearby red supergiant Betelgeuse dimmed by more than 1 visual magnitude in 2019, the deepest decline reported in 50-plus years of observations \citep{Betelgeuse2021Natur594,Cotton2020RNAAS4}.  Some white dwarf stars, the classic choice for photometric standards in the UV and optical, have shown both unusual intrinsic variability from pulsations \citep[e.g.][]{Provencal2009ApJGD358,Kilic2015ApJ,Hermes2017MNRAS} and external variability caused by disintegrating planetesimals \citep[as large as 40\%][]{Vanderburg2015Natur,Guidry2021} or accretion disks \citep{Scaringi2021Nat}.  While these examples are rare, they demonstrate that stars can vary for a variety of reasons, many of which are not predictable based on current knowledge.  
+Photometric monitoring of stars, as done by missions like CoRoT \citep{corot}, Kepler \citep{Koch2010} and \tess\ \citep{Ricker2015}, has revealed that they can change brightness due to a variety of factors, and these variations can unexpectedly change in timescale or amplitude. Many of these variations are internal to the star, e.g.\ stellar pulsations or spots rotating in and out of view \citep[e.g.][]{Berger1979deltaScuti, Mcquillan2014}, while other variations are external, e.g.\ eclipses and transits \citep[e.g.][]{prsa2011, Thompson2018}. Time-series photometric observations have revealed many examples of atypical brightness variations where stars change brightness suddenly and in unexpected ways.  For example, Boyajian's star, KIC~8462852, was discovered using Kepler data and shows unexplained drops in the flux of the star as large as 20\% at seemingly random times \citep{Boyajian2016MNRAS}.  The nearby red supergiant Betelgeuse dimmed by more than one visual magnitude in 2019, the deepest decline reported in 50-plus years of observations \citep{Betelgeuse2021Natur594,Cotton2020RNAAS4}.  Some white dwarf stars, the classic choice for photometric standards in the UV and optical, have shown both unusual intrinsic variability from pulsations \citep[e.g.][]{Provencal2009ApJGD358,Kilic2015ApJ,Hermes2017MNRAS} and external variability caused by disintegrating planetesimals \citep[as large as 40\%][]{Vanderburg2015Natur,Guidry2021} or accretion disks \citep{Scaringi2021Nat}.  While these examples are rare, they demonstrate that stars can vary for a variety of reasons, many of which are not predictable based on current knowledge.  
 
 \tess\ is well positioned to monitor the candidate standards for \webb\ for changes in flux on time scales between minutes and weeks at a precision as fine as a few hundred parts per million \citep{Ricker2015}, an improvement in precision, cadence and coverage over previous observations to identify short term variability in standard stars from the ground \citep[e.g.][]{Marinoni2016}.  \tess\ was launched in 2017 with the purpose of identifying transiting exoplanets around nearby stars.  It photometrically observes a swath of sky covering 24 degrees by 90 degrees for a month at a time and has a bandpass of 0.6--1~\mum\ \citep{Ricker2015} that overlaps with the shortest wavelengths of the \webb\ bandpass.
 
 As a result, \tess\ has serendipitously observed most of the candidate spectrophotometric standards for \webb\ over the course of its mission, and it will continue to do so in its extended mission.  We have examined the \tess\ data for these candidates, looked for evidence of photometric variability, and we report upper limits on any variability if none was detected.  For the 15 \jwst\ spectrophotometric standards found to show statistically significant periodic variability, we show a light curve and periodogram, and provide a few simple statistics describing the amplitude of the variations. 
-
-%Finally, we discuss the limits of this analysis and suggest future observations that could be used to further monitor these potential spectrophotometric standard stars crucial to get the most absolute precision from \jwst\ observations.
 
 
 \section{Candidate JWST Spectrophotometric Standard Stars} 
@@ -89,10 +88,7 @@ As a result, \tess\ has serendipitously observed most of the candidate spectroph
 
 Spectrophotometric calibration requires accurate models of the stars chosen as standards, because any errors in the assumed true spectrum of a standard will propagate into the entire calibrated database \citep{Gordon2022inprep}.  Calibrating with a sample of standards will reduce the impact of problems with the model of any one star, and combining different types of standards will reduce the problems even further.  By comparing the calibration as determined from different stars, and different classes of stars, outliers can be identified and their models corrected, or, if that proves impossible, the stars can be rejected.
 
-The \webb\ calibration will be based on three classes of standard stars:  white dwarfs, A dwarfs, and solar analogs (i.e., G dwarfs) \citep{Gordon2022inprep}.  It is expected that five stars of each class will be observed during the \jwst\ mission to accomplish this task.  Comparisons of the stars will identify potential issues with models of the stars and possible outliers.  The sample examined in this paper, see Table~\ref{tab:targets}, is based on lists of candidates available in the JWST User Documentation accessed in 2020~December \citep{jdox}.  It must be stressed that the candidate list is evolving as stars are vetted and new stars are added to better cover parameter space \citep{Gordon2022inprep}.  The calibration standard stars in this list overlap calibration stars used by other observatories. For example, the list includes A dwarf stars reported by \citet{Reach2005} to be primary standards for IRAC on Spitzer (see those with shortened-names starting with J in Table~\ref{tab:targets}). For more information on how the calibration stars are selected, see \citet{Gordon2022inprep}.
-
-
-%The calibration standards observed by the Hubble and Spitzer Space Telescopes form the basis of the list of candidates.  Bright stars have been added for the mid-infrared calibration, along with faint ones to probe dynamic range. 
+The \webb\ calibration will be based on three classes of standard stars:  white dwarfs, A dwarfs, and solar analogs (i.e., G dwarfs) \citep{Gordon2022inprep}.  It is expected that five stars of each class will be observed during the \jwst\ mission to accomplish this task.  Comparisons of the stars will identify potential issues with models of the stars and possible outliers.  The sample examined in this paper, see Table~\ref{tab:targets}, is based on lists of candidates available in the JWST User Documentation accessed in 2020~December\footnote{\url{https://jwst-docs.stsci.edu/jwst-data-calibration-considerations/jwst-data-absolute-flux-calibration}} \citep{jdox}.  It must be stressed that the candidate list is evolving as stars are vetted and new stars are added to better cover parameter space \citep{Gordon2022inprep}.  The calibration standard stars in this list overlap calibration stars used by other observatories. For example, the list includes A dwarf stars reported by \citet{Reach2005} to be primary standards for IRAC on Spitzer (see those with shortened-names starting with J in Table~\ref{tab:targets}). For more information on how the calibration stars are selected, see \citet{Gordon2022inprep}.
 
 \input{targetTable}
 
@@ -109,20 +105,17 @@ We then use the software \lightkurve\ \citep{lightkurve} to detrend, and normali
 
 To look for periodic variations, we used Lomb-Scargle periodograms \citep{Lomb1976,lightkurve} and report those with significant peaks that otherwise do not appear to be caused by systematic noise (see Section~\ref{sec:var}).  For those with no significant variability, we provide upper limits to any variability that could be detected (see Section~\ref{sec:novar}).
 
-%We also examined the light curve for each sector by eye to look for any large, single-occurrence outliers in the relative flux that could not be explained by systematic noise. None of the light curves we examined showed evidence of flares, transits, eclipses or other transient, short-duration events that were not more readily explained by systematic noise.
-
 \subsection{Stars with Variability}
 \label{sec:var}
 
 We found 15 of the \webb\ spectrophotometric standards stars in our sample to have statistically significant periodic variability. Only four show variability in flux larger than 1\% when considering the full extent of the observed variability (minimum to maximum brightness, or peak-to-peak).  For each variable star, the largest peak in the periodogram is highly significant and is at least 5 times larger than the noise level of the periodogram \citep{KjeldsenBedding1995, Baran2021}. Figures~\ref{fig:lcft1} -- \ref{fig:lcft4} show parts of the light curve and Lomb-Scargle periodogram created from one entire \tess\ sector for the 15 variable stars in our sample (two sectors for the case of HD~38949). 
 Figure~\ref{fig:lcft1} highlights the four with the largest variations.  
-%For all of these stars at least one observed peak in the periodogram is five times the noise level (calculated as described in Appendix A of \citet{KjeldsenBedding1995}).
 
-Table~\ref{tab:variable} summarizes the amplitude of the variations and their approximate period.  It lists the period of the maximum amplitude peak along with the maximum amplitude. Since most stars have more than one period of variability, the maximum amplitude in the periodogram does not capture the full change in relative flux observed in the \tess\ light curves. To approximate full observed peak-to-peak variability in the presence of noise, we calculate the quantity $V_{95}$, which is defined to be the difference between the maximum and minimum values of those points contained by 95.45\% of the values in the light curve centered on the median.  $V_{95}$ measures the envelope of all data within $\pm 2\sigma$ of the median. 
 
-%Dividing that quantity by four is approximately the same as the standard deviation of the light curve. -- Not true except in a few cases because there is a non-gaussian signal there. 
+Table~\ref{tab:variable} summarizes the amplitude of the variations and their approximate period.  It lists the period and amplitude of the maximum amplitude peak in the periodogram. Since most stars have more than one period of variability, the maximum amplitude in the periodogram does not capture the full change in relative flux observed in the \tess\ light curves. To approximate full observed peak-to-peak variability in the presence of noise, we calculate the quantity $V_{95}$, which is defined to be the difference between the maximum and minimum values of those points contained by 95.45\% of the values in the light curve centered on the median.  $V_{95}$ measures the envelope of all data within $\pm 2\sigma$ of the median. 
 
-When reporting the statistics we use the sectors shown in Figures~\ref{fig:lcft1} -- \ref{fig:lcft4} and bin the light curves to 6-minute bins to improve the signal-to-noise ratio in some of the dimmer stars. The displayed sectors were chosen to be representative of the observed variability and have the lowest observed noise. The $V_{95}$ statistic acts as a reasonable measure of the full amplitude of the observed variability for those whose amplitudes are significantly larger than the noise.  For the fainter stars with low amplitudes and noisy light curves, $V_{95}$ overestimates the true extent of the observed variability. No single statistic will fully summarize the variability of these stars; the light curves and periodograms provide a more complete picture of the  amplitude and shape of the periodicity.
+
+When reporting the statistics we use the sectors shown in Figures~\ref{fig:lcft1} -- \ref{fig:lcft4} and bin the light curves to 6-minute bins to improve the signal-to-noise ratio in some of the dimmer stars. The displayed sectors were chosen to be representative of the observed variability and have the lowest observed noise. The $V_{95}$ statistic acts as a reasonable measure of the full amplitude of the observed variability for those whose amplitudes are significantly larger than the noise.  For the fainter stars with low amplitudes and noisy light curves, $V_{95}$ overestimates the true extent of the observed variability. For example, for the dimmest variable star, J1732526 ($T_{mag}=12.5$), the precision on the flux (estimated from the average power in the periodogram, \altcitep{KjeldsenBedding1995}) is 0.5\%, one fifth of the $V_{95}$ statistic for this star.  No single statistic will fully summarize the variability of these stars; the light curves and periodograms provide a more complete picture of the amplitude, timescale and shape of the observed periodicity.
 
 A single \tess\ pixel covers more than 21 arc seconds of the sky on a side, making it possible for nearby sources to contaminate our light curves. Table~\ref{tab:variable} also includes the crowding metric calculated by the SPOC pipeline, as a way to quickly asses the impact of nearby sources. The crowding metric indicates the fraction of the light in the aperture that comes from the target star given the positions and amplitudes of stars in the TIC.  A value near 1.0 indicates an isolated star, while lower values indicate significant crowding from neighbors.  Two of our large-amplitude variables (J1732526 and J1812095) have crowding values around 0.8.  The SPOC Pipeline corrects the light curve amplitudes for any dilution due to nearby stars by using this crowding value \citep{FausnaughDRN}.  As a result, the amplitudes and upper limits we report in this paper have already accounted for these neighbors.
 
@@ -139,7 +132,7 @@ Due to the presence of nearby stars for two of our large variables, we investiga
 \centering
 \includegraphics[width=0.45\linewidth]{figures/TIC219897252_s040_5modes_tloc.png}
 \includegraphics[width=0.45\linewidth]{figures/TIC233095291_s040_2modes_tloc.png}
-\caption{Pixel heat maps of the fitted amplitudes at the specified periods across the pixels downloaded from \tess\ in Sector 40 as generated by \tesslocalize\ \citep[][]{HiggensBell}. TIC 219897252 is on the left and TIC 233095291 is on the right. The grey circles represent known Gaia Data Release 2 sources with $T_{mag} > 15$, three magnitudes dimmer than the target stars. The black 'x' represents the best fit between the heat map and the \tess\ PRF. In both cases the best fit location overlaps the Gaia location of our target at the center of the \tess\ pixels, indicating that the variability comes from the targeted source.} 
+\caption{Heat maps of the fitted amplitudes for each 21 arc\,second pixels at the observed periods across the pixels downloaded from \tess\ in Sector 40 for this target (generated by \tesslocalize\ \altcitep{HiggensBell}.) TIC 219897252 (J1732526) is on the left and TIC~233095291 (J1812095) is on the right. The grey circles represent known Gaia Data Release 2 sources with $T_{mag} > 15$, three magnitudes dimmer than the target stars. The black 'x' represents the best fit between the heat map and the \tess\ PRF. In both cases the best fit location overlaps the Gaia location of our target at the center of the \tess\ pixels, indicating that the variability comes from the targeted source.} 
 \label{fig:cent}
 \end{figure*}
 
@@ -147,17 +140,17 @@ Due to the presence of nearby stars for two of our large variables, we investiga
 
 While we do not attempt to definitively explain the physical reasons for the variability we observe in these stars, it is likely the reason for the photometric variability is related to either stellar pulsations or spots. 
 
-May of our variable stars are A-dwarf stars.  Variability in A-type stars can occur due to a plethora of reasons, including stellar pulsations.  The $\delta$ Scuti variables appear at the intersection of the instability strip and the main sequence \citep[e.g.,][]{Petit1987}.  They are the most prominent pulsators among A dwarfs, and they make up $\sim$27\% of all variable A and F dwarfs \citep{Uytterhoeven2011}.   They pulsate in pressure modes and mixed pressure and low-order gravity modes due to the $\kappa$ mechanism \citep{Lee1985}, with pulsation frequencies in the range 18\,min to 8\,hrs \citep{Amado2004}. $\gamma$ Doradus variables also appear in a similar part of the HR diagram \citep[e.g.,][]{Kaye1999}, although they are rarer than $\delta$ Scuti stars, making up $\sim$12\% of all variable A and F dwarfs. \citep{Uytterhoeven2011}. $\gamma$ Dor variables pulsate in non-radial, high-order gravity modes caused by convective blocking \citep{Guzik2000} with pulsation periods typically on the order of one day \citep{Grigahcene2010}.  Some stars, known as hybrid $\gamma$ Dor-$\delta$ Scuti stars, exhibit both $\gamma$ Dor and $\delta$ Scuti pulsations \citep{Grigahcene2010}.  These hybrid pulsators account for an additional $\sim$23\% of all variability found in A and F dwarfs. In our sample we find evidence of all three types of the above pulsators at varying amplitudes.
+Many of our variable stars are A-dwarf stars.  Variability in A-type stars can occur due to a plethora of reasons, including stellar pulsations.  The $\delta$ Scuti variables appear at the intersection of the instability strip and the main sequence \citep[e.g.,][]{Petit1987}.  They are the most prominent pulsators among A dwarfs, and they make up $\sim$27\% of all variable A and F dwarfs \citep{Uytterhoeven2011}.   They pulsate in pressure modes and mixed pressure and low-order gravity modes due to the $\kappa$ mechanism \citep{Lee1985}, with pulsation frequencies in the range 18\,min to 8\,hrs \citep{Amado2004}. $\gamma$ Doradus variables also appear in a similar part of the HR diagram \citep[e.g.,][]{Kaye1999}, although they are rarer than $\delta$ Scuti stars, making up $\sim$12\% of all variable A and F dwarfs. \citep{Uytterhoeven2011}. $\gamma$ Dor variables pulsate in non-radial, high-order gravity modes caused by convective blocking \citep{Guzik2000} with pulsation periods typically on the order of one day \citep{Grigahcene2010}.  Some stars, known as hybrid $\gamma$ Dor-$\delta$ Scuti stars, exhibit both $\gamma$ Dor and $\delta$ Scuti pulsations \citep{Grigahcene2010}.  These hybrid pulsators account for an additional $\sim$23\% of all variability found in A and F dwarfs. In our sample we find evidence of all three types of the above pulsators at varying amplitudes.
 
 Other than pulsations, binarity and rotational modulation due to spots can also cause variations in A stars. In our sample, we do not find evidence of short-period, eclipsing binarity which is expected since these usually have large flux variations that would have been seen in previous observations. Regarding rotation, \citet{Balona2013, Balona2017} claim to have found spots in more than 50\% of A stars in the Kepler data, suggesting that modulation due to surface rotation is more commonly observed than previously thought. However, the origin of spots in A and B stars is currently under debate, as these stars do not have a significant surface convective zone, which is usually associated with surface spots. The presence of a fossil magnetic field \citep{Parker1955} and the creation of a magnetic field caused by a dynamo effect in mass motions that occur in convective layers \citep{Charbonneau2014} are two of the contending ideas for the creation of spots in hotter main sequence stars. In our sample, we find signatures that suggest the presence of spots in several objects:  HD 38949, J1812095, $\lambda$~Lep, eta01~Dor, and HR~7018.
 
 
 
-\subsection{Largest Variable Stars}
+\subsection{Large Amplitude Variable Stars}
 
 In this section we discuss in more detail the size and astrophysics for the variability of the six stars with the largest changes in brightness that we measured in the \tess\ data from our target list. Each of these stars show a $V_{95}\ge0.35$\%. In these cases, the time scale and amplitude of the variations, could impact high precision spectrophotometric calibrations, and their variability should be considered before using them as a standard star. The remaining nine stars have small enough amplitudes that at least for JWST they will not have significant impact on the calibrations. 
 
-Three of the large amplitude variable stars are A dwarf stars from the \citet{Reach2005} Spitzer calibration. The amplitudes we see here were likely below the level of detection for Spitzer. For comparison, \citet{Krick2021IRAC} measured the IRAC fluxes in dozens to thousands of observations for most of our variable stars and reported standard deviations between 0.7\%\ and 2.8\%\ for the 3.6$\mu m$ band.  This observed scatter is approximately 4 times larger than the variability we report here.
+Three of the large amplitude variable stars are A dwarf stars from the \citet{Reach2005} Spitzer calibration. The amplitudes we see here were likely below the level of detection for Spitzer. For comparison, \citet{Krick2021IRAC} measured the IRAC fluxes in dozens to thousands of observations for most of our variable stars and reported standard deviations between 0.7\%\ and 2.8\%\ for the 3.6$\mu m$ band.  This observed scatter is approximately four times larger than the variability we report here.
 
 
 \subsubsection{HD~38949 (TIC~32869782)}
@@ -167,18 +160,9 @@ This G dwarf varies with a peak-to-peak amplitude of 1.2\% (see top panel of Fig
 It is also noteworthy that HD~38949 is listed in the Hubble Space Telescope calspec database  \footnote{\url{https://www.stsci.edu/hst/instrumentation/reference-data-for-calibration-and-tools/astronomical-catalogs/calspec}} \citep{Bohlin2014PASP126}, as a star with complete STIS coverage that could be used to support flux calibrations of other observatories.
 
 
-%HD~38949 is a known standard starDue to these properties, this star has already been removed from lists of standards for \webb (private communication).
-% ($T_{mag}=$7.3) 
-% SWIFT - IX/58/2sxps - 2020yCat.9058....0E
-% only X-ray source among the solar analogs in the sample
-
 \subsubsection{J1808347 (TIC~219114641)}
 
 This A dwarf shows a rich set of peaks in its periodogram that produce a peak-to-peak amplitude of 1.65\% (see second panel in Figure~\ref{fig:lcft1}). These large variations  make it a poor spectrophotometric standard. The periods range from 0.5 to 1.0 hours, with the strongest mode at 0.6 hours.  The high frequency variations are caused by $\delta$ Scuti pulsations.  The variability is difficult to see in the 30-minute \tess\ data taken during the first year of TESS observations; however, they are more apparent in the 2-minute cadence data from Sectors 40 and 41.  This star will be observed again by \tess\ in Sectors 47--55.  
-
-%The large-amplitude ($>1$\%) flux variations observed in \tess\ will likely prevent this target from being considered a suitable target for high precision calibrations, like those required for \webb.
-
-
 
 
 \subsubsection{J1732526 (TIC~219897252)}
@@ -190,21 +174,14 @@ J1732526 is an A star that behaves much like J1808347; it is multiperiodic, with
 
 This A dwarf ($T_{mag}=11.6$) shows consistent oscillations with periods of 1--3\,days and peak-to-peak changes in the flux greater than 1.5\% in the TESS bandpass (see bottom panel in Figure~\ref{fig:lcft1}).  The light curve and periodogram shows significant (though somewhat variable in amplitude) variations at a period of 2.44 days, with a secondary peak at exactly half that period, which is indicative of rotational modulation due to spots.  The periodogram shows no evidence for short-period peaks (i.e., for periods of an hour or less).  \tess\ observed this star in Sectors 14--26 at a 30-minute cadence, and at a 2-minute cadence in Sector 40.  The variability is approximately the same across all sectors. The large peak-to-peak variability on long time scales may make this target not suitable for high-precision spectrophotometric calibration studies.
 
-%J1812095 was one of 11 stars reported as primary standards for IRAC on Spitzer by \cite{Reach2005}.  They did not report any variability, but it may have been below their detection limit.  
-
-
 \subsubsection{HR~6514 (TIC~198456033)} % HD 158458
 
 The periodogram of this bright A dwarf ($T_{mag}=6.4$) shows a complex set of peaks with periods between roughly 0.5 and 2.0 hours, with up to 0.42\% peak-to-peak variability (see top panel of Figure~\ref{fig:lcft2}).  The strongest mode has a period of 1.3 hours.  The periodicity is too fast to arise from stellar rotation and thus likely arises from short-period, likely $\delta$ Scuti ($p$-mode) pulsations.  \tess\ observed this star in Sectors 14--26 and 40--41, and is expected to observe it again in Sectors 47--55.  In the present data, the variability is consistent in amplitude from one sector to the next. 
-
-%The total size of the variability of the light curve is just above 0.4\%, which may not be large enough to outright remove it from the \webb\ calibration list.  The variations, however, do indicate surface temperature changes from pulsations that might compromise this star as a spectrophotometric standard.
-
 
 
 \subsubsection{$\lambda$ Lep (TIC~442871031)}
 
 This B9.5 dwarf ($T_{mag}=4.6$) varies with a coherent period of 1.26\,days and multiple exact harmonics of this base period, which suggests that the variation is due to spots on the stellar surface. The peak-to-peak amplitude greater than 0.3\% (see the fourth panel of Figure~\ref{fig:lcft2}). \tess\ observed this star in two sectors: 5 and 32. In both sectors the variability was similar in amplitude and shape. $\lambda$ Lep is one of the hot B dwarfs under consideration for use as standards starting in \jwst\ Cycle 2 \citep{Gordon2022inprep}. 
-%The amplitude of the variation is small enough that it could still be considered a suitable standard star for \webb. 
 
 
 
@@ -252,11 +229,6 @@ This B9.5 dwarf ($T_{mag}=4.6$) varies with a coherent period of 1.26\,days and 
 \end{figure*}
 
 
-%How we looked for variability.
-%Definition of any statistics we measured.
-
-%%Create 1 Table with all the Results (star, TESS photometric limits, TESS <10day limits, T/F Variability detected)
-
 \subsection{Not Observed to Vary}
 \label{sec:novar}
 
@@ -269,7 +241,6 @@ For those cases with no significant variability, we provide two statistics to be
 
 \input{novar_stats}
 \vspace{-1em}
-%\label{sec:novar}
 
 \begin{figure*}
     \centering
@@ -280,15 +251,6 @@ For those cases with no significant variability, we provide two statistics to be
     \label{fig:novar}
 \end{figure*}
 
-
-% Jerzykiewicz et al. (2015) - 2015MNRAS.454..724J - no variability in 10 Lac
-
-%We will have to keep picking standards and so TESS is a great resource.
-% Discussion
-% - Power of all-sky temporal surveys
-% - Nature of variables
-% - Predictions/speculation on wavelength dependence of variability
-
 \section{Conclusions}
 \label{sec:conclusion}
 
@@ -298,9 +260,7 @@ Some of the stars vetted in this paper are the same stars that were used to cali
 
 \begin{acknowledgments}
 %\textcolor{red}{Please add your acknowledgements here.}
-This paper includes data collected by the \tess\ mission. Funding for the \tess\ mission is provided by the NASA's Science Mission Directorate. We thank the STScI internship program and \jwst\ for providing funding for for MK. JJH acknowledges financial support through NASA Award 80NSSC20K0592.
-This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France (DOI: 10.26093/cds/vizier). The original description of the VizieR service was published in A\&AS 143, 23.
-This research has been made possible by the MAST archive for access to the \tess\ light curves, \tess\ Input Catalog, and target pixel files.
+This paper includes data collected by the \tess\ mission. Funding for the \tess\ mission is provided by the NASA's Science Mission Directorate. We thank the STScI internship program and \jwst\ for providing funding for for MK. JJH acknowledges financial support through NASA Award 80NSSC20K0592. This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France (DOI: 10.26093/cds/vizier). The original description of the VizieR service was published in A\&AS 143, 23. This research has been made possible by the MAST archive for access to the \tess\ light curves, \tess\ Input Catalog, and target pixel files.
 \end{acknowledgments}
 
 \vspace{5mm}
@@ -315,48 +275,3 @@ This research has been made possible by the MAST archive for access to the \tess
 \bibliographystyle{aasjournal}
 
 \end{document}
-
-
-%THIS PARAGRAPH IS REDUNDANT WITH THE INTRO BUT SAYS A BIT MORE.  SOME OF THE TEXT MAY BE USEFUL IN THE DISCUSSION.  Each candidate must be vetted for any signs of trouble, and one important indicator is variability.  Not only would variability introduce random photometric errors to the assumed truth spectrum, but it could also point to a number of other issues that would make models of a star less reliable.  For example, periodic eclipses are the most straightforward way to reveal an unseen companion, but variability can also result from more subtle orbital interactions.  Stellar pulsation, especially for A dwarfs, is another concern.  Variability due to stellar rotation, while a problem in itself, could also reveal strong magnetic fields and starspot activity, which could render models of the star inaccurate.
-
-%Calibrations of \webb's instruments is done through both observations of stars and models of the stellar flux density. Calibration stars are chosen to be those where the spectra can be modeled to the 1\% level. \webb\ has chosen a set of A, G and white dwarf stars that have been observed by both \textit{Hubble} and \textit{Spitzer} \citep{Krick2021IRAC} to do these calibrations and require that at least 4~stars that can be modeled to the required accuracy in order to calibrate all the observing modes of the \webb\ observatory.  
-
-
-%class are generally associated with spectral classes from late A to early F. Here we present \webb\ standards, which generally fall in the range A0--A3, however,  here we find multiple occurrences of $\delta$ Scuti stars and $\gamma$ Dor stars, indicating that the spectral classification may not be accurate.
-
-%Two classes of variables have properties similar to the four variable A dwarfs in the standard-star sample:  $\alpha^2$ CVn and rapidly oscillating Ap (roAp) stars.  The $\alpha&2$ CVn variables have periods between half a day or so up to $\sim$ days, amplitudes of 0.1 mag or less, spectral classes of B9--A5, and spectral types indicating peculiarities, with a suffix ``p'' and other descriptors indicating strong lines from Si, Sr, Cr, and/or rare earths like Eu \citep{Pettit1987, Hoffmeister1984}.  High-resolution spectra reveal strong magnetic field lines, and their variability is linked to the rotation of spots.
-
-%The roAp stars, discovered by \cite{Kurtz1982} show similar spectral properties.  Recent TESS observations have increased the sample of roAp stars to a total of 88 \citep{Holdsworth2021}.  The spectral classes cover a wider range, from early A to late F.  Like the $\alpha^2$ CVn stars, the amplitudes are generally small, but the roAp stars can show longer periods due to rotation and shorter periods due to non-radial pulsations.
-
-%also pulsations, spots and rapid pulsations which occur in rapidly oscillating Ap (roAp) stars \citep{Kurtz1978,Kurtz1982}. For roAp stars, the pulsations, which have periods on between 4.7--6\,min\citep{Holdsworth2021}, are not the dominant feature in the light curve. Like many peculiar A (Ap) stars, roAp stars have prominent spots, which can generate variations on the order of magnitudes. However, these variations tend to be more prominent in roAp stars due to their strong magnetic fields, which have been measured up to 34\,kilogauss \citep{Mathys2017}.
-
-%Kaye1999 - Kaye, A.~B., Handler, G., Kriscinuas, K., et al.\ 1999, \pasp, 111, 840.
-%Hoffmeister, C., Richter, G., \& Wenzel, W., Variable Stars, 1984 (Berlin: Springer-Verlag)
-
-%The four A dwarfs identified with peak-to-peak variability of 0.4\% or more have periods and spectral classes that resemble the $\alpha^2$ CVn and roAp stars, although their amplitudes tend to be smaller and their spectral classifications have not noted any of the expected peculiarities.  HR 6514 has a spectral type of A4 V \citep{Crowley1969}, but otherwise could be a low-amplitude roAp star.  J1812095, with its longer 2.4-day period, looks more like a low-amplitude $\alpha2$ CVn variable.  The other two variable A dwarfs, J1732526 and J1808347, have periods of 0.5--0.6 h and amplitudes of 1.4--1.6\% and could be roAp stars.
-
-%These last three stars, J1812095, J1732526, and J1808347, were selected as \webb\ candidate stars because they were used as standards by IRAC on Spitzer \citep{Reach2005}.  J1812095 was one of 11 primary standards for IRAC during the cryogenic mission.  The low amplitude of its variability would have been difficult to detect with IRAC.  All three stars have rather ordinary spectral types not at all like what would be expected for $\alpha^2$ CVn or roAp variables, but their spectral types were determined photometrically, not spectroscopically (W.\ Reach, private communication, 2005).  The spectral types were assigned based on the spectral type of stellar templates which best fit the available photometry prior to the Spitzer mission.  It would be worthwhile to investigate the optical spectra of these low-amplitude variables with sufficient spectral resolution to search for the expected unusual properties.
-
-% HR 6514 P = 0.054 d = 1.3 h, V95 = 0.42%
-% J1812095 P = 2.44 d, V95 = 1.57%
-% J1732526 P = 0.020 d = 0.5 h, V95 = 1.40%
-% J1808347 P = 0.026 d = 0.6 h, V95 = 1.65%
-
-%NOT SURE HOW TO FIT THE FOLLOWING INTO THE NARRATIVE.
-
-%RoAp stars are primarily thought to pulsate via the $\kappa$ mechanism, also known as the heat engine mechanism, although alternative mechanisms have been proposed for the highest frequency pulsations \citep{Cunha2013}. Like roAp stars, $\delta$ Scuti stars also pulsate via the Kappa mechanism, although their pulsation periods are 18\,min--8\,hr \citep{Amado2004}. They pulsate in radial and non-radial pressure modes and low-order gravity modes, with their flux variations reaching 0.9\,mag.
-
-%..\textcolor{red}{Please write about astrophysics here and include in the per star bit.}
-
-
-%The 1$\sigma$ variability is under 0.1\%, and like HR~6514, does not by itself disqualify this star as a standard.  $\lambda$ Lep is one of the hot B dwarfs under consideration for use as standards starting in \jwst\ Cycle 2.
-
-% Burssens et al. (2020) - 2020A&A...639A..81B - find periods of 1.26 and 0.63 days
-% use Lesh 1968 for sp type ref
-
-
-%the requirement to calibrate the instruments on \jwst\ to an accuracy better than 2\% \citep{jdox}.  
-
-%The variability of a candidate is only one consideration among many when choosing the best candidates for calibration. The \webb\ calibration program \citep{Gordon2022inprep} will be based on observations of many calibration stars to ensure that the calibration does not  hinge on one star acting as expected. By identifying those with known issues, we provide the \webb\ calibration team with information necessary to pick those stars with the highest likelihood of accurate calibrations in the least amount of observing time.
-
-%Those stars with variations in flux larger than $\approx$1\% could create unnecessary systematic noise when trying to accurately calibrate the telescope. Not only would variability introduce random photometric errors, but it could also reveal a number of other issues that would make models of a star less reliable.  For example, variability due to stellar rotation, while a problem in itself, could also reveal strong magnetic fields and star spot activity, which could render models of the star inaccurate --- most notably, star spots cause multiple temperature components at the photosphere, severely complicating simple modeling.   
